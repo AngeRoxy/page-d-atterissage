@@ -1,0 +1,151 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+/* ================= HEADER ================= */
+header {
+    display: flex;
+    justify-content: space-between; /* espace entre logo et menu */
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* espace entre les liens */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+/* ================= HERO ================= */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #f39c12, #f1c40f);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* ================= PRODUITS ================= */
+.products {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.products h2 {
+    margin-bottom: 40px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes desktop */
+    gap: 20px;
+}
+
+.product-img {
+    height: 220px;       /* hauteur uniforme */
+    object-fit: cover;   /* coupe proprement */
+}
+
+
+
+
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #f39c12;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablette */
+@media (max-width: 992px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr; /* 1 colonne */
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
